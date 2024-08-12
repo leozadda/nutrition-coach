@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import { Infinity, PlugZap, Filter, Users, Lock, DollarSign } from 'lucide-react';
 
 const FeatureItem = ({ Icon, text }) => (
@@ -10,27 +11,27 @@ const FeatureItem = ({ Icon, text }) => (
 
 export default function OurSolution() {
   return (
-    <div className="text-BLUE bg-OFFWHITE text-center font-serif p-4 sm:p-8 md:p-16 space-y-24">
+    <div className="text-BLUE bg-OFFWHITE text-center font-serif py-16 px-8 lg:py-36 sm:p-8 md:p-16 space-y-24">
       <section>
         <img className="w-16 sm:w-24 md:w-32 mx-auto mb-8" src="https://www.juststop.io/images/marketing/curl-1.svg" alt="Decorative curl" />
-        <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-8">Does your inbox look like this?</h2>
+        <h2 className="text-5xl sm:text-5xl md:text-6xl lg:text-7xl mb-8">Does your inbox look like this?</h2>
         <img className="w-full max-w-2xl mx-auto mb-8" src="https://www.juststop.io/images/marketing/inbox-full.png" alt="Full inbox example" />
         <p className="text-xl sm:text-2xl md:text-3xl">Ours, too. It's awful. And it needs to stop. The thing is, cold sales emails do no good for anyone. So, we figured it's time someone did something about it.</p>
       </section>
       
       <section>
         <img className="w-16 sm:w-24 md:w-32 mx-auto mb-8" src="https://www.juststop.io/images/marketing/curl-2.svg" alt="Decorative curl" />
-        <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-8">Fix it in just a few seconds</h2>
+        <h2 className="text-5xl sm:text-5xl md:text-6xl lg:text-7xl mb-8">Fix it in just a few seconds</h2>
         <img className="w-full max-w-2xl mx-auto mb-8" src="https://www.juststop.io/images/marketing/inbox-clear.png" alt="Clear inbox example" />
-        <p className="text-xl sm:text-2xl md:text-3xl">Sign up and authorize your email accounts so Stop can start filtering out sales emails. That's it. That's all you have to do.</p>
+        <p className="text-xl sm:text-2xl md:text-3xl font-sans">Sign up and authorize your email accounts so Stop can start filtering out sales emails. That's it. That's all you have to do.</p>
       </section>
 
       <section>
         <img className="w-16 sm:w-24 md:w-32 mx-auto mb-8" src="https://www.juststop.io/images/marketing/curl-3.svg" alt="Decorative curl" />
-        <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-8">Here's how we do it</h2>
-        <p className="text-xl sm:text-2xl md:text-3xl mb-12">Stop filters through mass mailers as well as any sales or cold emailers. And once Stop has identified a bad actor's domain, it also sends any other addresses from that domain straight to spam.</p>
+        <h2 className="text-5xl sm:text-5xl md:text-6xl lg:text-7xl mb-8">Here's how we do it</h2>
+        <p className="text-xl sm:text-2xl md:text-3xl mb-12  font-sans">Stop filters through mass mailers as well as any sales or cold emailers. And once Stop has identified a bad actor's domain, it also sends any other addresses from that domain straight to spam.</p>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-8 text-lg sm:text-xl md:text-2xl mb-16">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-8 text-lg sm:text-xl md:text-2xl mb-16  font-sans">
           <FeatureItem Icon={Infinity} text="Unlimited accounts" />
           <FeatureItem Icon={PlugZap} text="Plug n' play" />
           <FeatureItem Icon={Filter} text="Automatic filtering" />
@@ -43,8 +44,10 @@ export default function OurSolution() {
       <section>
         <img className="w-16 sm:w-24 md:w-32 mx-auto mb-8" src="https://www.juststop.io/images/marketing/curl-4.svg" alt="Decorative curl" />
         <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-4">And the best part? It's totally free</h2>
-        <p className="text-xl sm:text-2xl md:text-3xl mb-8">We wanted to solve this problem for ourselves, so why not share it with the world. We're trying to build a community, not a customer base.</p>
-        <button className="bg-BLUE text-OFFWHITE rounded-2xl text-2xl sm:text-3xl md:text-4xl p-3 w-full sm:w-auto sm:px-8 hover:bg-blue-700 transition-colors">Free Call</button>
+        <p className="text-xl sm:text-2xl md:text-3xl mb-8  font-sans">We wanted to solve this problem for ourselves, so why not share it with the world. We're trying to build a community, not a customer base.</p>
+        <Link to="/signup">
+            <button className="px-10 py-3 w-auto fit-content bg-BLUE text-OFFWHITE rounded-full text-2xl sm:text-3xl md:text-4xl p-3 w-full sm:w-auto sm:px-8 transition-colors  hover:bg-OFFWHITE hover:text-BLUE hover:border ">Free Call</button>
+        </Link>
       </section>
     </div>
   );

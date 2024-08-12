@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function CustomerProblem() {
   return (
-    <div className="bg-BLUE font-serif text-OFFWHITE text-center p-4 sm:p-8 md:p-16 lg:p-24">
+    <div className="bg-BLUE font-serif text-OFFWHITE text-center py-16 px-9 sm:p-8 md:p-16 lg:py-36 ">
       <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl mb-4">
         Dear Salespeople,
       </h1>
