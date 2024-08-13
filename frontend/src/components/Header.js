@@ -1,18 +1,16 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+import LOGO from './B-L-U-E.png';
+
+const CALENDLY_LINK = "https://calendly.com/leozadda/talking-about-health-and-fitness-goals";
 
 export default function Header() {
   return (
-    // Main container with full viewport width and height
-    <div className="bg-OFFWHITE min-h-screen flex flex-col justify-center items-center p-4 font-serif text-center">
-      {/* Logo */}
-      <img className="w-20 sm:w-24 md:w-32 mb-8" src="https://www.juststop.io/images/logo/logo.svg" alt="Logo" />
-      {/* Main heading */}
-      <h1 className='text-BLUE text-7xl sm:text-9xl md:text-9xl lg:text-9xl mb-8 py-10'>Tell sales emails to just stop</h1>
-      {/* Call-to-action button */}
-      <Link to="/signup">
-        <button className='px-10 py-3 w-auto fit-content bg-BLUE text-OFFWHITE rounded-full text-4xl lg:text-6xl sm:text-2xl md:text-5xl w-full sm:w-auto sm:px-8 transition-colors font-sans  hover:bg-OFFWHITE hover:text-BLUE hover:border'>Free Call</button>
-      </Link>
+    <div className="bg-OFFWHITE min-h-screen flex flex-col justify-center items-center font-serif text-center px-4">
+      <img className="w-24 sm:w-28 md:w-32 lg:w-36 pb-6" src={LOGO} alt="Logo" />
+      <h1 className='text-BLUE text-6xl sm:text-7xl md:text-8xl lg:text-8xl xl:text-9xl mb-8 py-6 sm:py-8 md:py-10'>Your Fork is Your Weapon.</h1>
+      <a href={CALENDLY_LINK}>
+        <button className='px-6 sm:px-8 md:px-10 py-2 sm:py-3 bg-BLUE text-OFFWHITE rounded-full text-2xl sm:text-3xl md:text-4xl lg:text-5xl transition-colors font-sans hover:bg-OFFWHITE hover:text-BLUE hover:border border-BLUE'>Free Call</button>
+      </a>
     </div>
   );
 }

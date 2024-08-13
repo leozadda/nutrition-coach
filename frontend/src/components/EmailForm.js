@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
+const CALENDLY_LINK = "https://calendly.com/leozadda/talking-about-health-and-fitness-goals";
+
 export default function EmailForm() {
   const [formData, setFormData] = useState({
     name: '',
@@ -84,6 +86,8 @@ export default function EmailForm() {
         const response = await axios.post('http://localhost:5001/subscribe', formData);
         console.log('Subscription successful:', response.data);
         setSubmitStatus('success');
+        // Redirect to Calendly link
+        window.location.href = CALENDLY_LINK;
       } catch (error) {
         console.error('Subscription failed:', error.response ? error.response.data : error);
         setSubmitStatus('error');
@@ -97,7 +101,10 @@ export default function EmailForm() {
         {submitStatus === 'success' ? (
           <>
             <h2 className="text-OFFWHITE text-4xl sm:text-6xl lg:text-9xl mb-4">Congrats!</h2>
-            <p className="text-OFFWHITE text-xl sm:text-2xl font-sans">Please check your email (including spam folder) to schedule the call.</p>
+            <p className="text-OFFWHITE text-xl sm:text-2xl font-sans">
+              You're being redirected to schedule your call. If you're not redirected, 
+              <a href={CALENDLY_LINK} className="underline ml-1">click here</a>.
+            </p>
           </>
         ) : (
           <>

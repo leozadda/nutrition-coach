@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronDown, ChevronUp } from 'lucide-react';
+import { Plus, Minus,  } from 'lucide-react';
 
 const FAQItem = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,7 +11,7 @@ const FAQItem = ({ question, answer }) => {
         onClick={() => setIsOpen(!isOpen)}
       >
         <h3 className="text-2xl sm:text-2xl md:text-3xl">{question}</h3>
-        {isOpen ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+        {isOpen ? <Minus size={24} /> : <Plus size={24} />}
       </button>
       {isOpen && (
         <p className="text-m sm:text-xl pb-4 px-2  font-sans">{answer}</p>
@@ -23,16 +23,16 @@ const FAQItem = ({ question, answer }) => {
 export default function FAQ() {
   const faqData = [
     {
-      question: "Is Stop really free?",
-      answer: "Absolutely. We built Stop to solve a problem in our day-to-day lives and we just wanted to share it with the world. Ridding the world of bad sales emails benefits everyone, and we want you to join our mission."
+      question: "Do I have to eat weird food?",
+      answer: "Nope! You can still eat foods you like. We just help you pick the good stuff."
     },
     {
-      question: "What about emails that I do want?",
-      answer: "Don't worry. You'll still get the emails that you need. Our filter is built so that only sales emails and mass emails will get filtered. We still recommend that you check your spam and junk for the first week to make sure the right mail is getting filtered. If you see something in there that shouldn't be, just drag it back to your inbox and Stop will remove that sender from the naughty list."
+      question: "Will this take a lot of time?",
+      answer: "Not at all. We'll work together in a way that fits your busy life. You can pick how much time you want to spend each day or week."
     },
     {
-      question: "Does Stop read my emails?",
-      answer: "Nope, nope, nope. We never ever access or store any of the content of your emails in any form whatsoever. Your emails are yours forever and always and that is our number one priority. We only scan your emails for senders, not content. Read more about privacy and security here."
+      question: "What if I don't see results?",
+      answer: "We believe in you and your ability to improve. If you don't see the results you want, we'll work together to figure out why. We might change some things to help you get better. Plus, if you’re not happy after trying really hard, we can talk about getting your money back."
     }
   ];
 

@@ -1,6 +1,11 @@
 import React from 'react';
-import { Link } from "react-router-dom";
-import { Infinity, PlugZap, Filter, Users, Lock, DollarSign } from 'lucide-react';
+import { Infinity, PlugZap, Filter, Users, Lock, DollarSign, Earth, Dumbbell, MessageCircleMore, FlaskConical, Handshake, PersonStanding } from 'lucide-react';
+import STAR from './star.png';
+import LOSER from './loser.png';
+import WINNER from './winner.png';
+
+// Calendly link for scheduling calls
+const CALENDLY_LINK = "https://calendly.com/leozadda/talking-about-health-and-fitness-goals";
 
 const FeatureItem = ({ Icon, text }) => (
   <div className="flex flex-col items-center space-y-2">
@@ -10,44 +15,45 @@ const FeatureItem = ({ Icon, text }) => (
 );
 
 export default function OurSolution() {
-  return (
-    <div className="text-BLUE bg-OFFWHITE text-center font-serif py-16 px-8 lg:py-36 sm:p-8 md:p-16 space-y-24">
-      <section>
-        <img className="w-16 sm:w-24 md:w-32 mx-auto mb-8" src="https://www.juststop.io/images/marketing/curl-1.svg" alt="Decorative curl" />
-        <h2 className="text-5xl sm:text-5xl md:text-6xl lg:text-7xl mb-8">Does your inbox look like this?</h2>
-        <img className="w-full max-w-2xl mx-auto mb-8" src="https://www.juststop.io/images/marketing/inbox-full.png" alt="Full inbox example" />
-        <p className="text-xl sm:text-2xl md:text-3xl">Ours, too. It's awful. And it needs to stop. The thing is, cold sales emails do no good for anyone. So, we figured it's time someone did something about it.</p>
-      </section>
-      
-      <section>
-        <img className="w-16 sm:w-24 md:w-32 mx-auto mb-8" src="https://www.juststop.io/images/marketing/curl-2.svg" alt="Decorative curl" />
-        <h2 className="text-5xl sm:text-5xl md:text-6xl lg:text-7xl mb-8">Fix it in just a few seconds</h2>
-        <img className="w-full max-w-2xl mx-auto mb-8" src="https://www.juststop.io/images/marketing/inbox-clear.png" alt="Clear inbox example" />
-        <p className="text-xl sm:text-2xl md:text-3xl font-sans">Sign up and authorize your email accounts so Stop can start filtering out sales emails. That's it. That's all you have to do.</p>
-      </section>
+    return (
+      <div className="text-BLUE bg-OFFWHITE text-center font-serif py-12 sm:py-16 md:py-24 lg:py-32 px-4 sm:px-8 space-y-16 sm:space-y-24">
+        <section>
+          <img className="w-16 sm:w-20 md:w-24 lg:w-28 mx-auto mb-6" src={STAR} alt="Decorative curl" />
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-6 sm:mb-8">Is this you?</h2>
+          <img className="lg:mt-12 lg:mb-24 w-[60vw] mt-12 mb-24 sm:max-w-[40vw] md:max-w-[30vw] lg:max-w-[20vw] mx-auto mb-6 sm:mb-8 shadow-BLUE shadow-2xl rounded-lg transform skew-y-2 skew-x-3 sm:skew-y-3 sm:skew-x-6" src={LOSER} alt="Full inbox example" />
+          <p className="text-xl sm:text-2xl md:text-3xl">Let's face it, second place is just the first loser.</p>
+        </section>
+        
+        <section>
+          <img className="w-16 sm:w-20 md:w-24 lg:w-28 mx-auto mb-6" src={STAR} alt="Decorative curl" />
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-6 sm:mb-8">You need a coach.</h2>
+          <img className="lg:mt-12 lg:mb-24 w-[60vw] mt-12 mb-24 sm:max-w-[50vw] md:max-w-[30vw] lg:max-w-[20vw]  mx-auto mb-6 sm:mb-8 shadow-BLUE shadow-2xl rounded-lg transform skew-y-2 skew-x-3 sm:skew-y-3 sm:skew-x-6" src={WINNER} alt="Clear inbox example" />
+          <p className="text-xl sm:text-2xl md:text-3xl p-3 font-sans">Imagine if every decision you made fueled your performance, not hindered it. Our coaching is your secret weapon to crushing the competition.</p>
+        </section>
 
       <section>
-        <img className="w-16 sm:w-24 md:w-32 mx-auto mb-8" src="https://www.juststop.io/images/marketing/curl-3.svg" alt="Decorative curl" />
-        <h2 className="text-5xl sm:text-5xl md:text-6xl lg:text-7xl mb-8">Here's how we do it</h2>
-        <p className="text-xl sm:text-2xl md:text-3xl mb-12  font-sans">Stop filters through mass mailers as well as any sales or cold emailers. And once Stop has identified a bad actor's domain, it also sends any other addresses from that domain straight to spam.</p>
+        <img className="w-16 sm:w-24 md:w-32 mx-auto mb-8" src={STAR} alt="Decorative curl" />
+        <h2 className="text-5xl sm:text-5xl md:text-6xl lg:text-7xl mb-8">How We'll Help You</h2>
+        <p className="text-xl sm:text-2xl md:text-3xl mb-12 p-3 font-sans">Extremely tailored science-based nutritional coaching for your specific goal.</p>
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-8 text-lg sm:text-xl md:text-2xl mb-16  font-sans">
-          <FeatureItem Icon={Infinity} text="Unlimited accounts" />
-          <FeatureItem Icon={PlugZap} text="Plug n' play" />
-          <FeatureItem Icon={Filter} text="Automatic filtering" />
-          <FeatureItem Icon={Users} text="Community" />
-          <FeatureItem Icon={Lock} text="Private and secure" />
-          <FeatureItem Icon={DollarSign} text="Free to use" />
+          <FeatureItem Icon={FlaskConical} text="Backed by science" />
+          <FeatureItem Icon={MessageCircleMore} text="24/7 Communication" />
+          <FeatureItem Icon={Dumbbell} text="No Equipment Needed" />
+          <FeatureItem Icon={Handshake} text="Join A Community" />
+          <FeatureItem Icon={Earth} text="From anywhere" />
+          <FeatureItem Icon={PersonStanding} text="Personalized" />
         </div>
       </section>
 
       <section>
-        <img className="w-16 sm:w-24 md:w-32 mx-auto mb-8" src="https://www.juststop.io/images/marketing/curl-4.svg" alt="Decorative curl" />
-        <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-4">And the best part? It's totally free</h2>
-        <p className="text-xl sm:text-2xl md:text-3xl mb-8  font-sans">We wanted to solve this problem for ourselves, so why not share it with the world. We're trying to build a community, not a customer base.</p>
-        <Link to="/signup">
+        <img className="w-16 sm:w-24 md:w-32 mx-auto mb-8" src={STAR} alt="Decorative curl" />
+        <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-4">And the best part? Free coaching call.</h2>
+        <p className="text-xl sm:text-2xl md:text-3xl mb-8 p-3 font-sans">Don't gamble on your goals. Get expert advice for free. We can help you plan the perfect path forward if you give us a call. </p>
+        {/* Call-to-action button linking to Calendly */}
+        <a href={CALENDLY_LINK}>
             <button className="px-10 py-3 w-auto fit-content bg-BLUE text-OFFWHITE rounded-full text-2xl sm:text-3xl md:text-4xl p-3 w-full sm:w-auto sm:px-8 transition-colors  hover:bg-OFFWHITE hover:text-BLUE hover:border ">Free Call</button>
-        </Link>
+        </a>
       </section>
     </div>
   );
