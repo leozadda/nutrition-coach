@@ -21,14 +21,14 @@ export default function OurSolution() {
           <img className="w-16 sm:w-20 md:w-24 lg:w-28 mx-auto mb-6" src={STAR} alt="Decorative curl" />
           <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-6 sm:mb-8">Is this you?</h2>
           <img className="lg:mt-12 lg:mb-24 w-[60vw] mt-12 mb-20 sm:max-w-[40vw] md:max-w-[30vw] lg:max-w-[20vw] mx-auto mb-6 sm:mb-8 shadow-BLUE shadow-2xl rounded-lg transform skew-y-2 skew-x-3 sm:skew-y-3 sm:skew-x-6" src={LOSER} alt="Full inbox example" />
-          <p className="text-xl sm:text-2xl md:text-3xl">Let's face it, second place is just the first loser.</p>
+          <p className="text-xl sm:text-2xl md:text-3xl mt-12">Let's face it, second place is just the first loser.</p>
         </section>
         
         <section>
           <img className="w-16 sm:w-20 md:w-24 lg:w-28 mx-auto mb-6" src={STAR} alt="Decorative curl" />
           <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-6 sm:mb-8">You need a coach.</h2>
           <img className="lg:mt-12 lg:mb-24 w-[60vw] mt-12 mb-20 sm:max-w-[50vw] md:max-w-[30vw] lg:max-w-[20vw]  mx-auto mb-6 sm:mb-8 shadow-BLUE shadow-2xl rounded-lg transform skew-y-2 skew-x-3 sm:skew-y-3 sm:skew-x-6" src={WINNER} alt="Clear inbox example" />
-          <p className="text-xl sm:text-2xl md:text-3xl p-3 font-sans">Imagine if every decision you made fueled your performance, not hindered it. Our coaching is your secret weapon to crushing the competition.</p>
+          <p className="text-xl sm:text-2xl md:text-3xl p-3 font-sans mt-12">Imagine if every decision you made fueled your performance, not hindered it. Our coaching is your secret weapon to crushing the competition.</p>
         </section>
 
       <section>
@@ -52,7 +52,7 @@ export default function OurSolution() {
         <p className="text-xl sm:text-2xl md:text-3xl mb-8 p-3 font-sans">Don't gamble on your goals. Get expert advice for free. We can help you plan the perfect path forward if you give us a call. </p>
         {/* Call-to-action button linking to Calendly */}
         <a href={CALENDLY_LINK}>
-            <button className="px-10 py-3 w-auto fit-content bg-BLUE text-OFFWHITE rounded-full text-2xl sm:text-3xl md:text-4xl p-3 sm:w-auto sm:px-8 transition-colors  hover:bg-OFFWHITE hover:text-BLUE hover:border ">Free Call</button>
+            <button className="px-10 py-3 w-auto fit-content bg-BLUE text-OFFWHITE rounded-full text-2xl sm:text-3xl md:text-4xl p-3 sm:w-auto sm:px-8 transition-colors  hover:bg-OFFWHITE hover:text-BLUE hover:border mb-6">Free Call</button>
         </a>
       </section>
     </div>
